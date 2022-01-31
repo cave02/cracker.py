@@ -5,6 +5,9 @@ Ataque de diccionario
 
 
 EJEMPLO :
+
+
+
 python3 hashcracker.py -H  2db95e8e1a9267b7a1188556b2013b33 -d wordlist
 
 Hashes en archivos :
