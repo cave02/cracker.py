@@ -58,7 +58,7 @@ def files(file,wordlist):
 			line = line.strip()
 			if len(line) == 32 :
 				print()
-				print("hash encontrado :+line)
+				print("hash encontrado :"+line)
 				with open(wordlist,"r") as word:
 					for words in word:
 						lol = words.strip()
