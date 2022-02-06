@@ -12,8 +12,8 @@ parser.add_argument("-d",help="diccionario a utilizar")
 parser.add_argument("-f",help="fila que contiene hashes")
 
 a = parser.parse_args()
-print("\033[34m [*] creador : cave02")
-print("\033[32;1m [*] github : https://github.com/cave02 \033[0m")
+print("[*] creador : cave02")
+print("[*] github : https://github.com/cave02 \033[0m")
 
 passwd = a.H
 wordlist = a.d
@@ -43,13 +43,13 @@ def crack(passwd,wordlist):
 		print("\033[31m[×] hash no combatible\033[0m")
 		exit()
 	with open(wordlist,"r") as infile:
-		print("\033[34m[+] rompiendo...")
+		print("[*] rompiendo...")
 		for line in infile:
 			line = line.strip()
 			linehash = h(line.encode()).hexdigest()
 			if linehash == passwd :
 				print("\033[32;1m diccionario : "+wordlist)
-				print("  \033[33m"+passwd+"\033[34m >>> \033[32m"+line)
+				print("\033[33m"+passwd+"\033[34m >>> \033[32m"+line)
 				print("\033[0m")
 				exit()
 def files(file,wordlist):
