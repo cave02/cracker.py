@@ -53,7 +53,6 @@ def crack(passwd,wordlist,now,final,empiezo):
 			line = line.strip()
 			linehash = h(line.encode()).hexdigest()
 			if linehash == passwd :
-				time.sleep(5)
 				print("\033[32;1m[*] tiempo local : \033[33m"+str(time_actual)+"\033[32m")
 				print("[*] crackeado en : "+str(final - final))
 				print("[*] diccionario  : \033[33m"+wordlist+"\033[32m")
